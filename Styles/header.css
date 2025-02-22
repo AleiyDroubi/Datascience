@@ -1,0 +1,82 @@
+.header{
+    position:fixed;
+    background-color: var(--primary-color);   
+    z-index: 1000; /* Ensure it's on top */
+    width: 100%;
+}
+/* Logo */
+.header .header-logo {
+    display: flex;
+    align-items: center; 
+    cursor: pointer;
+} 
+
+.header-logo .logo {
+    height: 80px;
+    display: flex;
+     /* Adjust logo size */
+    padding-left: 4px;
+    align-items: center;
+}
+
+.header-logo .header-title{
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+}
+/* home-service-contact-login */
+.header-links{
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 4px;
+    text-decoration: none;
+    font-size: 22px;
+    text-align: center;
+}
+
+.header-links .link{
+    color:#fff; /* editing */
+    text-decoration: none;
+    border-radius: 20px;
+    width: 100px;
+}
+
+.header-links .icon{
+    font-size: 24px;
+    color:#fff; /* editing */
+    text-decoration: none;
+    width:30px;
+}
+
+/* Hover effects */
+.header-links .link:hover{
+    /* width: 100px; */
+    border-radius: 20px;
+    color: var(--secondary-color); 
+    background-color: rgba(0, 0, 0, 0.4); 
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    /* border: solid 1px #fff; */ 
+    text-decoration: underline;
+}
+.header-links .icon:hover{
+    /* width:30px; */
+    border-radius: 20px;
+    color: var(--secondary-color); 
+    cursor: pointer;
+    /* transform: scale(1); */
+    transition: all 0.3s ease-in-out; 
+    text-decoration: underline;   
+}
+
+.header-title,
+.header-title a{
+    font-size: 32px;
+    color: #fff;
+    text-decoration: none;
+}
+/* First letter styling */
+.header-title a::first-letter {
+    font-size: 2rem;
+    color: var(--secondary-color);
+}
