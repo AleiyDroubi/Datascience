@@ -1,8 +1,10 @@
 /* Nadaaaaaa */
-/* Log in page styles */
+/* Register page styles */
+
+/* The whole section */
 .register-section{
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,6 +12,7 @@
     color: #fff
 }
 
+/* The second section (Container) */
 .register-container{
     width: 120vh;
     height: 100vh;
@@ -21,6 +24,7 @@
     background-repeat: no-repeat;
 }
 
+/* The third section (Form) */
 .register-form{
     width: 100%;
     height: 100vh;
@@ -30,6 +34,7 @@
     align-items: center;
 }
 
+/* heading (Register) */
 .register-form h1{
     width: 90%;
     margin-bottom: 60px;
@@ -39,7 +44,7 @@
     font-size: 32px;
     color: #fff;
 }
-
+/* Fourth container (input and links and button) */
 .input{
     width: 70%;
     height: 50%;
@@ -51,6 +56,7 @@
     background-color: transparent;
 }
 
+/* Fifth container for each 2 inputs  */
 .input-group{
     width: 90%;
     height: 30px;
@@ -60,7 +66,7 @@
     background-color: transparent;
 }
 
-
+/* space between each 2 input (first last name, etc...) */
 .space{
     width: 100%;
     height: 100%;
@@ -70,7 +76,7 @@
 }
 
 
-
+/* Each input styling */
 .input-group input{
     width: 100%;
     height: 100%;
@@ -83,6 +89,7 @@
     font-size: 18px;
 }
 
+/* Placeholder styling */
 input::placeholder {
     color: #fff;
     opacity: 1;
@@ -93,19 +100,7 @@ input:active::placeholder{
     transition: opacity 0.3s ease-in-out;
 }
 
-
-
-
-
-
-.register-link{
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    font-size: 16px;
-    margin-bottom: 15px;
-}
-
+/* container which contain the Button */
 .register-button{
     width: 100%;
     margin-bottom: 20px;
@@ -114,6 +109,7 @@ input:active::placeholder{
     text-align: center;
 }
 
+/* Button styling */
 .register-button .button{
     width: 70%;
     height: 40px;
@@ -126,10 +122,7 @@ input:active::placeholder{
     font-weight: bold;
 }
 
-.input-group i{
-    font-size: 20px;
-}
-
+/* Making the input and button responsive when ( active, hover, focus) */
 .input-group input:active,
 .input-group input:focus,
 .input-group input:hover,
@@ -144,12 +137,21 @@ input:active::placeholder{
     box-shadow: 0 0 10px rgba(230, 126, 34, 0.7);
 }
 
+/* The links style (Log in) */
+.register-link{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+/* Styling of link */
 .register-section a{
     text-decoration: none;
     color: #fff;
     cursor: pointer;
 }
-
+/* Styling when hover */
 .register-section a:hover{
     outline: none;
     color: var(--secondary-color);
@@ -157,9 +159,24 @@ input:active::placeholder{
    text-decoration: underline;
 }
 
-.remember-forgot input[type="checkbox"] {
-    accent-color: var(--secondary-color);
-    width: 16px;
-    height: 16px;
-    cursor: pointer;
+/* Input invalid styling */
+input:invalid{
+    border: 2px solid red;
+    animation: shake 0.3s 2;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
 }
+
+/* Animation for invalid input */
+@keyframes shake {
+    25% {
+        translate: 6px 0;
+    }
+    50% {
+        translate: -6px 0;
+    }
+    75% {
+        translate: 6px 0;
+    }
+}
+/* End of register.css */
+/* End of register.css */

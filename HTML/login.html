@@ -1,5 +1,5 @@
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,7 +18,7 @@
 <body>
   <header class="header">
     <div class="header-logo">
-      <img src="/Web_Project/Images/3zima-Logo-removebg-preview.png" alt="Company Logo" class="logo">
+      <a href="home.html"><img src="/Web_Project/Images/3zima-Logo-removebg-preview.png" alt="Company Logo" class="logo"></a>
       <h1 class="header-title">
         <a class="link" href="home.html">3zima Car Service Center</a>
       </h1>
@@ -37,7 +37,7 @@
   <section class="login-section">
     <div class="login-container">
         <form class="login-form">
-            <h1>Login</h1>
+            <h1>Log in</h1>
           <div class="input">  
             <div class="input-group">
                 <input type="email" placeholder="Email" required>
@@ -45,17 +45,19 @@
             </div>
 
             <div class="input-group">
-                <input type="password" placeholder="Password" required>
+                <input type="password" placeholder="Password" autocomplete="new-password" required>
                 <i class='bx bxs-lock-alt'></i>
             </div>
             <div class="remember-forgot">
                 <label>
                     <input type="checkbox"> Remember me
                 </label>
-                <a href="forgot-nada.html">Forgot Password?</a>
+                <a href="forgot.html">Forgot Password?</a>
             </div>
+
+            <!-- When clicked change to home page -->
             <div class="login-button">
-              <button type="submit" class="button">Login</button>
+              <button type="submit" class="button">Log in</button>
             </div>
             <div class="register-link">
               <a href="register.html"><p>Don't have an account? </p></a><a href="register.html">Register</a>

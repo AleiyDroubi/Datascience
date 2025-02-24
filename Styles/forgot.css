@@ -1,8 +1,8 @@
-/* Nadaaaaaa */
-/* Log in page styles */
+/* Droubi */
+/* Forgot password page */
 
 /* The whole section */
-.login-section{
+.forgot-section{
     width: 100%;
     min-height: 100vh;
     display: flex;
@@ -13,7 +13,7 @@
 }
 
 /* The second section (Container) */
-.login-container{
+.forgot-container{
     width: 120vh;
     height: 100vh;
     box-shadow: 0 0 10px rgb(230, 126, 34);
@@ -25,7 +25,7 @@
 }
 
 /* The third section (Form) */
-.login-form{
+.forgot-form{
     width: 100%;
     height: 100vh;
     display: flex;
@@ -35,7 +35,7 @@
 }
 
 /* heading (Register) */
-.login-form h1{
+.forgot-form h1{
     width: 90%;
     margin-bottom: 60px;
     display: flex;
@@ -72,7 +72,7 @@
     width: 100%;
     height: 100%;
     border-radius: 20px;
-    border: solid 1px #fff;
+    border: 1px solid #fff;
     text-align: center;
     background-color: transparent;
     color: #fff;
@@ -89,16 +89,6 @@ input:focus::placeholder,
 input:active::placeholder{
     opacity: 0.5;
     transition: opacity 0.3s ease-in-out;
-}
-
-/* Container contain the Links <a> and button */
-.remember-forgot,
-.register-link{
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    font-size: 16px;
-    margin-bottom: 15px;
 }
 
 /* container which contain the Button */
@@ -143,27 +133,34 @@ input:active::placeholder{
     box-shadow: 0 0 10px rgba(230, 126, 34, 0.7);
 }
 
+.login-button a{
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    width :100%;
+}
+
+.register-link{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
 /* The links style (Log in) */
-.login-section a{
+.forgot-section a{
     text-decoration: none;
     color: #fff;
     cursor: pointer;
 }
 
 /* Styling when hover */
-.login-section a:hover{
+.forgot-section a:hover{
     outline: none;
     color: var(--secondary-color);
     transition: all 0.4s ease-in-out;
    text-decoration: underline;
-}
-
-/* Styling the checkbox */
-.remember-forgot input[type="checkbox"] {
-    accent-color: var(--secondary-color);
-    width: 16px;
-    height: 16px;
-    cursor: pointer;
 }
 
 /* Input invalid styling */
@@ -185,5 +182,3 @@ input:invalid{
         translate: 6px 0;
     }
 }
-/* End of login.css */
-/* End of login.css */
