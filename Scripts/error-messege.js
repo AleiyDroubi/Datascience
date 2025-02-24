@@ -1,14 +1,17 @@
-
+/* Phone Number Error msg */
 document.addEventListener("DOMContentLoaded", function () {
     const phoneInput = document.getElementById("phone");
     const errorMessage = document.getElementById("error-message");
 
     phoneInput.addEventListener("input", function () {
-        this.value = this.value.replace(/\D/g, "");
+        // This Allow only digits
+        this.value = this.value.replace(/\D/g, "");  
 
-        if (this.value.length === 11) {
+        //  Make it start with "01" and be exactly 11 digits long
+        const regex = /^01\d{9}$/;
+        if (regex.test(this.value)) {
             errorMessage.style.display = "none";
-            } else {
+        } else {
             errorMessage.style.display = "block";
         }
     });
