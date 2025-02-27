@@ -18,7 +18,7 @@
     width: 120vh;
     height: 120vh;
     box-shadow: 0 0 10px rgb(230, 126, 34);
-    background-image: url("/Web_Project/Images/contact\ img.jpg");
+    background-image: url("/Web_Project/Images/contact-bg-img.png");
     background-size: cover;
     background-color: rgba(0, 0, 0,.3);
     background-blend-mode: overlay; 
