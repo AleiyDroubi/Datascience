@@ -36,16 +36,18 @@
   <!-- Log in section -->
   <section class="login-section">
     <div class="login-container">
-        <form class="login-form">
+        <form id="form" class="login-form">
             <h1>Log in</h1>
           <div class="input">  
             <div class="input-group">
-                <input type="email" placeholder="Email" required>
+                <input id="email" type="email" placeholder="Email" required>
+                <span id="email" class="error-message"></span>
                 <i class='bx bx-user'></i>
             </div>
 
             <div class="input-group">
-                <input type="password" placeholder="Password" autocomplete="new-password" required>
+                <input id="password" type="password" placeholder="Password" autocomplete="new-password" required>
+                <span id="password-error" class="error-message"></span>
                 <i class='bx bxs-lock-alt'></i>
             </div>
             <div class="remember-forgot">

@@ -187,3 +187,9 @@ input:invalid{
 }
 /* End of login.css */
 /* End of login.css */
+/* Javascript css */
+.error-message {
+    color: red;
+    font-size: 12px;
+    display: none;
+}

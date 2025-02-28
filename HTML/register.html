@@ -13,7 +13,6 @@
     <!-- the icons library -->
     <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="/Web_Project/Scripts/error-messege.js  "></script>
 </head>
 
 <body>
@@ -37,45 +36,49 @@
 <!-- Regester form -->
     <section class="register-section">
         <div class="register-container">
-            <form class="register-form">
-                <h1>Sign Up</h1>
-                <div class="input">
-                    <div class="input-group name">
-                        <div class="space">
-                        <input type="text" placeholder="First Name" required>
+          <form id="register-form" class="register-form">
+            <h1>Sign Up</h1>
+            <div class="input">
+                <div class="input-group name">
+                    <div class="space">
+                        <input id="first-name" type="text" placeholder="First Name" required>
+                        <span id="error-first-name" class="message-error"></span>
                     </div>
                     <div class="space">
-                        <input type="text" placeholder="Last Name" required>
-                    </div>
-                    </div>
-
-                    <div class="input-group email" id="phone-group">
-                        <div class="space">
-                            <input type="email" placeholder="Email" required>
-                        </div>
-                        <div class="space">
-                            <input type="tel" id="phone" placeholder="Phone Number" required maxlength="11">
-                            <small id="error-message" style="color: red; display: none;">Incorrect Number</small>
-                        </div>
-                    </div>                
-                
-                    <div class="input-group password">
-                        <div class="space">
-                            <input type="password" placeholder="Password" autocomplete="new-password" required>
-                        </div>
-                        <div class="space">
-                            <input type="password" placeholder="Confirm Password" autocomplete="new-password" required>
-                        </div>
-                    </div>
-
-                    <div class="register-button">
-                        <button type="submit" class="button">Sign up</button>
-                    </div>
-                    <div class="register-link">
-                        <a href="/Web_Project/HTML/login.html"><p>Already have an account?</p></a> <a href="/Web_Project/HTML/login.html">Login</a>
+                        <input id="last-name" type="text" placeholder="Last Name" required>
+                        <span id="error-last-name" class="message-error"></span>
                     </div>
                 </div>
-            </form>
+        
+                <div class="input-group email" id="phone-group">
+                    <div class="space">
+                        <input id="email" type="email" placeholder="Email" required>
+                        <span id="error-email" class="message-error"></span>
+                    </div>
+                    <div class="space">
+                        <input id="phone" type="tel" placeholder="Phone Number" required maxlength="11">
+                        <span id="error-phone" class="message-error"></span>
+                    </div>
+                </div>                
+        
+                <div class="input-group password">
+                    <div class="space">
+                        <input id="password" type="password" placeholder="Password" autocomplete="new-password" required>
+                    </div>
+                    <div class="space">
+                        <input id="confirm-password" type="password" placeholder="Confirm Password" autocomplete="new-password" required>
+                        <span id="error-password" class="message-error"></span>
+                    </div>
+                </div>
+        
+                <div class="register-button">
+                    <button type="submit" class="button">Sign up</button>
+                </div>
+                <div class="register-link">
+                    <a href="/Web_Project/HTML/login.html"><p>Already have an account?</p></a> <a href="/Web_Project/HTML/login.html">Login</a>
+                </div>
+            </div>
+        </form>        
         </div>
     </section>
 
@@ -115,6 +118,7 @@
             <p>&copy; 2025 3zima Car Service Center. All rights reserved.</p>
           </div>
       </footer>
+      <script src="/Web_Project/Scripts/error-messege.js"></script>
 </body>
 
 </html>
