@@ -52,11 +52,15 @@ document.addEventListener("DOMContentLoaded", function () {
         validateInput(emailInput, emailError, emailPattern.test(emailInput.value), "Invalid email address");
     });
 
+    // Password Validation (Real-Time)
+    passwordInput.addEventListener("input", function (){
+        validateInput(passwordInput, passwordError, passwordInput.value.trim() !== "", "Password is required");
+    })
+
     // Password Matching Validation (Real-Time)
-    function validatePasswords() {
+    confirmPasswordInput.addEventListener("input", function () {
         validateInput(confirmPasswordInput, passwordError, passwordInput.value === confirmPasswordInput.value, "Passwords do not match");
-    }
-    confirmPasswordInput.addEventListener("input", validatePasswords);
+    });
 
     // Prevent form submission if any field is invalid
     form.addEventListener("submit", function (event) {
