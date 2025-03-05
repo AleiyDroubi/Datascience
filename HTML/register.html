@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script src="/Web_Project/Scripts/error-messege-register.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>3zima Service Center</title>
@@ -9,6 +8,8 @@
     <link rel="stylesheet" href="/Web_Project/Styles/header.css">
     <link rel="stylesheet" href="/Web_Project/Styles/footer.css">
     <link rel="stylesheet" href="/Web_Project/Styles/register.css">
+    <script src="/Web_Project/Scripts/toggle-password.js"></script>
+  <script src="/Web_Project/Scripts/error-message-register.js"></script>
     <!-- Bookmark logo -->
     <link rel="icon" type="image/png" href="/Web_Project/Images/3zima-Logo-removebg-preview.png">
     <!-- the icons library -->
@@ -65,10 +66,14 @@
                 <div class="input-group password">
                     <div class="space">
                         <input id="password" type="password" placeholder="Password" autocomplete="new-password" required>
+                        <span id="toggle-password" class="toggle-password"><i class='bx bxs-lock-open-alt'></i></span>
+                        <span id="hide-password" class="hide-password"><i class='bx bxs-lock-alt'></i></span>
                     </div>
                     <div class="space">
                         <input id="confirm-password" type="password" placeholder="Confirm Password" autocomplete="new-password" required>
                         <span id="error-password" class="message-error"></span>
+                        <span id="toggle-password2" class="toggle-password2"><i class='bx bxs-lock-open-alt'></i></span>
+                        <span id="hide-password2" class="hide-password2"><i class='bx bxs-lock-alt'></i></span>
                     </div>
                 </div>
         

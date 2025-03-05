@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3zima Service Center</title>
+    <!-- <link rel="stylesheet" href="Styles.css"> -->
+    <link rel="stylesheet" href="/Web_Project/Styles/global.css">
+    <link rel="stylesheet" href="/Web_Project/Styles/header.css">
+    <link rel="stylesheet" href="/Web_Project/Styles/footer.css">
+    <link rel="stylesheet" href="/Web_Project/Styles/service-booking.css">
+    <!-- Bookmark logo -->
+    <link rel="icon" type="image/png" href="img/3zima-Logo-removebg-preview.png">
+    <!-- the icons library -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="header-logo">
+      <a href="home.html"><img loading="lazy" src="/Web_Project/Images/3zima-Logo-removebg-preview.png" alt="Company Logo" class="logo"></a>
+      <h1 class="header-title">
+        <a class="link" href="home.html">3zima Car Service Center</a>
+      </h1>
+    </div>
+    <nav class="header-nav">
+      <div class="header-links">
+        <a class="link" href="home.html">Home</a>
+        <a class="link" href="service-booking.html">Services</a>
+        <a class="link" href="contact.html">Contact us</a>
+        <a href="login.html"><i class="bx bx-user icon"></i></a>
+      </div>
+    </nav>
+  </header>
+
+    <section class="service-booking">   
+      <div class="service-booking-container">
+          <form class="service-booking-form">
+              <h1>Book Your Car Services</h1>
+              <div class="input-item">
+                <!-- <label class="label-input">Full Name:</label> -->
+                <input type="text" placeholder="Enter your name" required>
+              </div>
+
+              <div class="input-item">
+                <!-- <label class="label-input">Email:</label> -->
+                <input type="email" placeholder="Enter your email" required>
+              </div>
+
+              <div class="input-item">
+                <!-- <label class="label-input">Phone Number:</label> -->
+                <input type="tel" placeholder="Enter your Phone number" pattern="01[0-9]{9}" required>
+              </div>
+
+              <div>
+                <label>Select Service:</label>
+                  <select multiple>
+                      <option value="Maintenance Service">Maintenance Service</option>
+                      <option value="Cleaning Service">Cleaning Service</option>
+                      <option value="Fast Check-Up Service">Fast Check-Up Service</option>
+                  </select>
+              </div>
+
+              <div>
+                <label>Preferred Date:</label>
+                <input type="date" required id="date">
+            <script>
+              document.getElementById("date").valueAsDate = new Date();
+            </script>
+
+              </div>
+              <div>
+                <label>Time</label>
+                <input type="time" required>
+              </div>
+              
+              <h2>Car Details</h2>
+                <div class="input-item">
+                  <!-- <label class="label-input">mark</label> -->
+                  <input type="text" placeholder="mark" required>
+                </div>
+
+                <div class="input-item">
+                  <!-- <label class="label-input">model</label> -->
+                  <input type="text" placeholder="model" required>
+                </div>
+
+                <div class="input-item">
+                  <!-- <label class="label-input">year </label> -->
+                  <input type="text" placeholder="year" required>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <section class="footer">    
+        <!-- Middle Section -->
+        <div class="footer-left">
+          <h3>Quick Links</h3>
+          <ul class="footer-list">
+            <li class="footer-list-item">About Us</li>
+            <li class="footer-list-item">Features</li>
+            <li class="footer-list-item">Programs</li>
+            <li class="footer-list-item">Blog</li>
+          </ul>
+        </div>
+    
+        <div class="footer-mid">
+          <h3>Resources</h3>
+          <ul class="footer-list">
+            <li class="footer-list-item">Help Center</li>
+            <li class="footer-list-item">Terms of Use</li>
+            <li class="footer-list-item">Privacy Policy</li>
+          </ul>
+        </div>
+    
+    
+        <!-- Right Section -->
+        <div class="footer-right">
+          <h3>Get in Touch</h3>
+          <div class="i">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-linkedin-in"></i>
+        </div>
+      </div>
+      </section>
+      <div class="down-left">
+        <p>&copy; 2025 3zima Car Service Center. All rights reserved.</p>
+      </div>
+    </footer>
+</body>
+
+</html>

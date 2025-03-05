@@ -53,12 +53,13 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Password Validation (Real-Time)
-    passwordInput.addEventListener("input", function (){
+    passwordInput.addEventListener("input", function () {
         validateInput(passwordInput, passwordError, passwordInput.value.trim() !== "", "Password is required");
-    })
+    });
+
 
     // Password Matching Validation (Real-Time)
-    confirmPasswordInput.addEventListener("input", function () {
+    confirmPasswordInput.addEventListener("input", function (){
         validateInput(confirmPasswordInput, passwordError, passwordInput.value === confirmPasswordInput.value, "Passwords do not match");
     });
 
@@ -70,6 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
         isValid = validateInput(lastNameInput, lastNameError, lastNameInput.value.trim() !== "", "Last Name is required") && isValid;
         isValid = validateInput(phoneInput, phoneError, phonePattern.test(phoneInput.value), "Phone number must start with 01 and be 11 digits") && isValid;
         isValid = validateInput(emailInput, emailError, emailPattern.test(emailInput.value), "Invalid email address") && isValid;
+        isValid = validateInput(passwordInput, passwordError, passwordInput.value.trim() !== "", "Password is required") && isValid;
         isValid = validateInput(confirmPasswordInput, passwordError, passwordInput.value === confirmPasswordInput.value, "Passwords do not match") && isValid;
         
         if (!isValid) {
