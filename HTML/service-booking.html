@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3zima Service Center</title>
+    <!-- <link rel="stylesheet" href="Styles.css"> -->
+    <link rel="stylesheet" href="/Web_Project/Styles/global.css">
+    <link rel="stylesheet" href="/Web_Project/Styles/header.css">
+    <link rel="stylesheet" href="/Web_Project/Styles/service-booking.css">
+    <link rel="stylesheet" href="/Web_Project/Styles/footer.css">
+    <!-- Bookmark logo -->
+    <link rel="icon" type="image/png" href="img/3zima-Logo-removebg-preview.png">
+    <!-- the icons library -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="/Web_Project/Scripts/Date-Time.js"></script>
+    <script src="/Web_Project/Scripts/phone-pattern.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-logo">
+            <a href="home.html">
+                <img loading="lazy" src="/Web_Project/Images/3zima-Logo-removebg-preview.png" alt="Company Logo" class="logo">
+            </a>
+            <h1 class="header-title">
+                <a class="link" href="home.html">3zima Car Service Center</a>
+            </h1>
+        </div>
+        <nav class="header-nav">
+            <div class="header-links">
+                <a class="link" href="home.html">Home</a>
+                <a class="link" href="service-booking.html">Services</a>
+                <a class="link" href="contact.html">Contact us</a>
+                <a href="login.html"><i class="bx bx-user icon"></i></a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="service-booking-section">
+        <div class="service-booking-container">
+            <form id="service-booking-form" class="service-booking-form">
+                <h1>Book Your Car Services</h1>
+
+                <div class="input">
+                    <div class="input-group">
+                        <input id="name" type="text" placeholder="Enter your name" required>
+                        <span id="error-name" class="message-error"></span>
+                    </div>
+
+                    <div class="input-group">
+                        <input type="tel" id="phone" placeholder="Enter your Phone number" required>
+                        <span id="error-phone" class="message-error"></span>
+                    </div>
+
+                    <h3>Choose your service</h3>
+
+                    <div class="service-box">
+                        <div class="service-options">
+                            <label>
+                                <input type="checkbox" class="service-checkbox" value="Maintenance Service" data-price="50">
+                                Maintenance Service - $50
+                            </label>
+
+                            <label>
+                                <input type="checkbox" class="service-checkbox" value="Cleaning Service" data-price="30">
+                                Cleaning Service - $30
+                            </label>
+
+                            <label>
+                                <input type="checkbox" class="service-checkbox" value="Fast Check-Up Service" data-price="40">
+                                Fast Check-Up Service - $40
+                            </label>
+
+                            <label>
+                                <input type="checkbox" class="service-checkbox" value="Repair Service" data-price="100">
+                                Repair Service - $100
+                            </label>
+
+                            <label>
+                                <input type="checkbox" class="service-checkbox" value="Painting Service" data-price="80">
+                                Painting Service - $80
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Display Total Price -->
+                    <h2>Total Price: <span id="total-price">$0</span></h2>
+
+
+                    <h3>Appointment Details</h3>
+                    <div>
+                        <div class="input-group">
+                          <label for="date">Preferred Date:</label>
+                          <input type="date" id="date" required>
+                        </div>
+                      
+                        <div class="input-group">
+                          <label for="time">Select Time:</label>
+                          <select id="time" required>
+                              <option value="" disabled>Select a time</option>
+                              <option value="08:00">08:00 AM</option>
+                              <option value="08:45">08:45 AM</option>
+                              <option value="09:30">09:30 AM</option>
+                              <option value="10:15">10:15 AM</option>
+                              <option value="11:00">11:00 AM</option>
+                              <option value="11:45">11:45 AM</option>
+                              <option value="12:30">12:30 PM</option>
+                              <option value="13:15">01:15 PM</option>
+                              <option value="14:00">02:00 PM</option>
+                              <option value="14:45">02:45 PM</option>
+                              <option value="15:30">03:30 PM</option>
+                              <option value="16:15">04:15 PM</option>
+                              <option value="17:00">05:00 PM</option>
+                              <option value="17:45">05:45 PM</option>
+                              <option value="18:30">06:30 PM</option>
+                              <option value="19:15">07:15 PM</option>
+                              <option value="20:00">08:00 PM</option>
+                          </select>
+                      </div>               
+                    </div>
+                    <!-- Waiting for the JS to be added && change html to be searched by options-->
+                    <h3>Car Details</h3>
+                    <div class="input-item">
+                        <input type="text" placeholder="mark" required>
+                    </div>
+
+                    <div class="input-item">
+                        <input type="text" placeholder="model" required>
+                    </div>
+
+                    <div class="input-item">
+                        <input type="text" placeholder="year" required>
+                    </div>
+
+                    <div class="book-button">
+                        <button type="submit">Book Now</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    <script src="/Web_Project/Scripts/date-time.js"></script>
+
+    <!-- Footer -->
+    <footer>
+        <section class="footer">
+            <!-- Middle Section -->
+            <div class="footer-left">
+                <h3>Quick Links</h3>
+                <ul class="footer-list">
+                    <li class="footer-list-item">About Us</li>
+                    <li class="footer-list-item">Features</li>
+                    <li class="footer-list-item">Programs</li>
+                    <li class="footer-list-item">Blog</li>
+                </ul>
+            </div>
+
+            <div class="footer-mid">
+                <h3>Resources</h3>
+                <ul class="footer-list">
+                    <li class="footer-list-item">Help Center</li>
+                    <li class="footer-list-item">Terms of Use</li>
+                    <li class="footer-list-item">Privacy Policy</li>
+                </ul>
+            </div>
+
+            <!-- Right Section -->
+            <div class="footer-right">
+                <h3>Get in Touch</h3>
+                <div class="i">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-linkedin-in"></i>
+                </div>
+            </div>
+        </section>
+
+        <div class="down-left">
+            <p>&copy; 2025 3zima Car Service Center. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

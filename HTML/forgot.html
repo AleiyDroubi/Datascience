@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3zima Service Center</title>
-    <link rel="stylesheet" href="/Web_Project/Styles/global.css">
-    <link rel="stylesheet" href="/Web_Project/Styles/header.css">
-    <link rel="stylesheet" href="/Web_Project/Styles/footer.css">
-    <link rel="stylesheet" href="/Web_Project/Styles/forgot.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3zima Service Center</title>
+  <link rel="stylesheet" href="/Web_Project/Styles/global.css">
+  <link rel="stylesheet" href="/Web_Project/Styles/header.css">
+  <link rel="stylesheet" href="/Web_Project/Styles/footer.css">
+  <link rel="stylesheet" href="/Web_Project/Styles/forgot.css">
+  <script src="/Web_Project/Scripts/toggle-password.js"></script>
+  <script src="/Web_Project/Scripts/error-message-forgot.js"></script>
 
     <!-- Bookmark logo -->
   <link rel="icon" type="image/png" href="/Web_Project/Images/3zima-Logo-removebg-preview.png">
@@ -39,14 +41,23 @@
             <form id="forgot-form" class="forgot-form">
                 <h1>Create New Password</h1>
             <div class="input">
+              <div class="input-group">
+                <input id="email" type="email" placeholder="Email" required>
+                <span id="error-email" class="message-error"></span>
+                <i class='bx bx-user'></i>
+            </div>
                 <div class="input-group">
                     <input id="password" type="password" placeholder="New Password" autocomplete="new-password" required>
-                  
-                    <i class='bx bxs-lock-alt'></i>
+                    <span id="error-password" class="message-error"></span>
+                    <span id="toggle-password" class="toggle-password"><i class='bx bxs-lock-open-alt'></i></span>
+                    <span id="hide-password" class="hide-password"><i class='bx bxs-lock-alt'></i></span>
                 </div>
                 <div class="input-group">
-                    <input type="password" placeholder="Confirm Password" autocomplete="new-password" required>
-                    <i class='bx bxs-lock-alt'></i>
+                    <input id="confirm-password" type="password" placeholder="Confirm Password" autocomplete="new-password" required>
+                    <span id="error-password" class="message-error"></span>
+                    <span id="toggle-password2" class="toggle-password2"><i class='bx bxs-lock-open-alt'></i></span>
+                    <span id="hide-password2" class="hide-password2"><i class='bx bxs-lock-alt'></i></span>
+                    
                 </div>
                 <!-- When clicked change to home page -->
                 <div class="login-button">
@@ -96,5 +107,4 @@
             <p>&copy; 2025 3zima Car Service Center. All rights reserved.</p>
           </div>
       </footer>
-      
 </body>

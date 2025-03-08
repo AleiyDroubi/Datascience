@@ -76,12 +76,13 @@
 }
 
 
+
 /* Each input styling */
 .input-group input{
     width: 100%;
     height: 100%;
     border-radius: 20px;
-    border: solid 1px #fff;
+    border: 1px solid #fff;
     text-align: center;
     background-color: transparent;
     color: #fff;
@@ -156,7 +157,7 @@ input:active::placeholder{
     outline: none;
     color: var(--secondary-color);
     transition: all 0.4s ease-in-out;
-   text-decoration: underline;
+    text-decoration: underline;
 }
 /* End of register.css */
 /* End of register.css */
@@ -166,4 +167,12 @@ input:active::placeholder{
     font-size: 14px;
     display: none;
     margin-top: 5px;
+}
+
+.input-group i{
+    font-size: 20px;
+    color:#fff;
+}
+.toggle-password,.toggle-password2{
+    display: none;
 }
