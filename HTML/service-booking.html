@@ -41,7 +41,7 @@
 
     <section class="service-booking-section">
         <div class="service-booking-container">
-            <form id="sservice-booking-form" class="service-booking-form">
+            <form id="service-booking-form" class="service-booking-form">
                 <h1>Book Your Car Services</h1>
 
                 <div class="input">
@@ -60,36 +60,35 @@
                     <div class="service-box">
                         <div class="service-options">
                             <label>
-                                <input type="checkbox" id="maintenance" name="service" value="Maintenance Service">
-                                Maintenance Service
+                                <input type="checkbox" class="service-checkbox" value="Maintenance Service" data-price="50">
+                                Maintenance Service - $50
                             </label>
 
                             <label>
-                                <input type="checkbox" id="cleaning" name="service" value="Cleaning Service">
-                                Cleaning Service
+                                <input type="checkbox" class="service-checkbox" value="Cleaning Service" data-price="30">
+                                Cleaning Service - $30
                             </label>
 
                             <label>
-                                <input type="checkbox" id="fast-checkup" name="service" value="Fast Check-Up Service">
-                                Fast Check-Up Service
+                                <input type="checkbox" class="service-checkbox" value="Fast Check-Up Service" data-price="40">
+                                Fast Check-Up Service - $40
                             </label>
 
                             <label>
-                                <input type="checkbox" id="repair" name="service" value="Repair Service">
-                                Repair Service
+                                <input type="checkbox" class="service-checkbox" value="Repair Service" data-price="100">
+                                Repair Service - $100
                             </label>
 
                             <label>
-                                <input type="checkbox" id="painting" name="service" value="Painting Service">
-                                Painting Service
-                            </label>
-
-                            <label>
-                                <input type="checkbox" id="painting" name="service" value="Painting Service">
-                                etc
+                                <input type="checkbox" class="service-checkbox" value="Painting Service" data-price="80">
+                                Painting Service - $80
                             </label>
                         </div>
                     </div>
+
+                    <!-- Display Total Price -->
+                    <h2>Total Price: <span id="total-price">$0</span></h2>
+
 
                     <h3>Appointment Details</h3>
                     <div>

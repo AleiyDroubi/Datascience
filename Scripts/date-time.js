@@ -45,3 +45,25 @@ document.addEventListener("DOMContentLoaded", function () {
         selectTime.selectedIndex = 0;
     }
 });
+
+/* Total price counter will add in another js file */
+document.addEventListener("DOMContentLoaded", function () {
+    const checkboxes = document.querySelectorAll(".service-checkbox");
+    const totalPriceElement = document.getElementById("total-price");
+
+    function updateTotal() {
+        let total = 0;
+
+        checkboxes.forEach(checkbox => {
+            if (checkbox.checked) {
+                total += parseFloat(checkbox.getAttribute("data-price"));
+            }
+        });
+
+        totalPriceElement.textContent = `$${total}`;
+    }
+
+    checkboxes.forEach(checkbox => {
+        checkbox.addEventListener("change", updateTotal);
+    });
+});
