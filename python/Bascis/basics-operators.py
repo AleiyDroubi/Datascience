@@ -137,3 +137,59 @@ txt = "Hello\"World!"  #Hello"World!
 print(txt)
  """
 
+""" x = 15
+print(bool(x))  #True
+y = 0
+print(bool(y))  #False   """
+#operators
+# arithmetic operators: +, -, *, /, %, **, //
+# assignment operators: =, +=, -=, *=, /=, %=, **=, //=
+# comparison operators: ==, !=, >, <, >=, <=
+# logical operators: and, or, not
+# identity operators: is, is not
+# membership operators: in, not in
+# bitwise operators: &, |, ^, ~, <<, >> 
+a = 10
+b = 5
+print(a + b)  #15
+print(a - b)  #5
+print(a * b)  #50
+print(a / b)  #2.0
+print(a // b)  #2
+print(a % b)  #0
+print(a ** b)  #100000
+a += b  #a = a + b
+print(a)  #15
+a -= b  #a = a - b
+print(a)  #10
+a *= b  #a = a * b
+print(a)  #50
+a /= b  #a = a / b
+print(a)  #10.0
+a %= b  #a = a % b
+print(a)  #0.0
+a = 10
+a **= b  #a = a ** b
+print(a)  #100000
+a = 10
+a //= b  #a = a // b
+print(a)  #2
+print(a == b)  #False
+print(a != b)  #True
+print(a > b)  #False
+print(a < b)  #True
+print(a >= b)  #False
+print(a <= b)  #True
+print(a > 5 and b < 10)  #True
+print(a > 5 or b < 5)  #True
+print(not(a > 5 and b < 10))  #False
+print(a is b)  #False
+print(a is not b)  #True
+print(a in [1,2,3,4,5])  #False
+print(a not in [1,2,3,4,5])  #True
+print(a & b)  #0  (bitwise AND)
+print(a | b)  #15 (bitwise OR)
+print(a ^ b)  #15 (bitwise XOR)
+print(~a)  #-11 (bitwise NOT)
+print(a << 1)  #20 (bitwise left shift)
+print(a >> 1)  #5  (bitwise right shift)
