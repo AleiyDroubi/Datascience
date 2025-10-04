@@ -193,3 +193,4 @@ print(a ^ b)  #15 (bitwise XOR)
 print(~a)  #-11 (bitwise NOT)
 print(a << 1)  #20 (bitwise left shift)
 print(a >> 1)  #5  (bitwise right shift)
+##
