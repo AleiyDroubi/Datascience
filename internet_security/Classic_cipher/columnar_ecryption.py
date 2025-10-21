@@ -86,3 +86,4 @@ print(f"Original:  {plaintext}")
 print(f"Key:       {key}")
 print(f"Encrypted: {encrypted}")
 print(f"Decrypted: {decrypted}")
+print(columnar_decrypt("ILEDTN HPTRSO LITMAX SAXERXTANONI SNFOTX", "SECRET"))  # Example decryption 

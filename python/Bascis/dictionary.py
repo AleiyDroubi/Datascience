@@ -78,3 +78,28 @@ for x, y in myfamily.items():
     print(x)
     for i, j in y.items():
         print(i, j)
+
+#filtering
+thisdict = {
+  "brand": "Ford",
+    "model": "Mustang",
+    "year": 1964,
+    "colors": ["red", "white", "blue"]
+}
+newdict = {k: v for k, v in thisdict.items() if k != "model"}
+print(newdict)  #{'brand': 'Ford', 'year': 1964, 'colors': ['red', 'white', 'blue']}
+
+sales_data ={
+    "January": 1500,
+    "February": 1800,
+    "March": 1200,
+    "April": 2000,
+    "May": 1700
+}
+high_sales = {month: sales for month, sales in sales_data.items() if sales > 1600}
+print(high_sales)  #{'February': 1800, 'April': 2000 'May': 1700}
+low_sales = {month: sales for month, sales in sales_data.items() if sales <= 1600}
+print(low_sales)  #{'January': 1500, 'March': 1200}
+
+sorted_sales = dict(sorted(sales_data.items(), key=lambda item: item[1], reverse=True))
+print(sorted_sales)  #{'April': 2000, 'February': 1800, 'May': 1700, 'January': 1500, 'March': 1200}
