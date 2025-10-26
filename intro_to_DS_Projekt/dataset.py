@@ -26,7 +26,7 @@ female_id = data[data["gender"] == "Female"]["customer_id"]
 
 plt.figure(figsize=(10, 6))
 plt.hist(data[data["gender"]=="Female"] ['age'], bins=30, color='purple', alpha=0.7)
-plt.title('Number of Female Customers')
+plt.title('Number of Female Customers and there age')
 plt.xlabel('Gender')
 plt.ylabel('Count') 
 plt.show()
@@ -35,7 +35,7 @@ femalebigger60 = data["gender"][data["age"] > 60].value_counts()["Female"]
 print(femalebigger60)
 
 #balance by geiography
-plt.figure(figsize=(10, 6))
+plt.figure(figsize=(10, 7))
 data.groupby('country')['balance'].mean().plot(kind='bar')
 plt.title('Average Balance by Country')
 plt.xlabel('Country')
