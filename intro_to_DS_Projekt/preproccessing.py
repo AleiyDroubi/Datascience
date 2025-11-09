@@ -15,7 +15,7 @@ plt.title('Missing Values Heatmap')
 duplicated_valus = df.duplicated().sum() # 0 duplicate rows
 
 #Feature engineering example
-""" avrage_salary = df["estimated_salary"].mean()
+avrage_salary = df["estimated_salary"].mean()
 avrage_balance = df["balance"].mean()
 
 df["IsHighValueCustomer"] = 0
@@ -44,8 +44,53 @@ bins = [min_age, 24, 45, 60, 75, max_age]
 labels = ["Young", "Adult", "Middle-Aged", "Senior", "elderly"]
 df["AgeGroup"] = pd.cut(df["age"], bins=bins, labels=labels, include_lowest=True)
 agegroup = df["AgeGroup"].value_counts() #Adult / 7432  Middle-Aged / 1647  Young / 457  Senior / 419  elderly / 45  
- """
+
 df.to_csv("preproccessed_data.csv", index=False)
 
 # Load the preprocessed data with new features
 preproccess_df = pd.read_csv("preproccessed_data.csv")
+
+#scaling on all numerical features except customer_id...
+from sklearn.preprocessing import StandardScaler
+scaler = StandardScaler()
+numerical_features = [ "age", "balance", "estimated_salary"]
+preproccess_df[numerical_features] = scaler.fit_transform(preproccess_df[numerical_features]) 
+#credit score and tenure and product_numbr will scale later if needed
+
+
+#categorial to numerical encoding
+from sklearn.preprocessing import LabelEncoder
+label_encoder = LabelEncoder()
+catagorical_features = ["gender"]
+preproccess_df["gender"]= label_encoder.fit_transform(preproccess_df[catagorical_features])
+
+df["country_france"] = 0
+df.loc[df["country"] == "France", "country_france"] = 1
+
+df["country_germany"] = 0
+df.loc[df["country"] == "Germany", "country_germany"] = 1
+
+df["country_spain"] = 0
+df.loc[df["country"] == "Spain", "country_spain"] = 1
+preproccess_df = preproccess_df.drop("country", axis=1)
+#one hot encoding for age group
+agegroup_dummies = pd.get_dummies(preproccess_df["AgeGroup"], prefix="AgeGroup")
+preproccess_df = pd.concat([preproccess_df, agegroup_dummies], axis=1)
+preproccess_df = preproccess_df.drop("AgeGroup", axis=1)
+
+preproccess_df = preproccess_df.drop("customer_id", axis=1) #dropping customer id as it is not needed for modeling
+
+preproccess_df.to_csv("final_preproccessed_data.csv", index=False)
+
+final_data = pd.read_csv("final_preproccessed_data.csv")
+
+(final_data["AgeGroup_Young"].value_counts()) # 457
+(final_data["AgeGroup_Middle-Aged"].value_counts()) # 1647
+(final_data["AgeGroup_Senior"].value_counts()) # 419
+(final_data["AgeGroup_elderly"].value_counts()) # 45
+(final_data["AgeGroup_Adult"].value_counts()) # 7432
+
+print(final_data.info())
+
+#next step outliers and correlation analysis and feature selection
+
