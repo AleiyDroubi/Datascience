@@ -1,5 +1,6 @@
 import pandas as pd
 import matplotlib.pyplot as plt
+from pygments import highlight
 import seaborn as sns
 
 # Read the CSV file
@@ -8,8 +9,8 @@ df = pd.read_csv("data.csv")
 
 # Check for missing values
 missing_values = df.isnull().sum() # 0 missing values in each column
-sns.heatmap(missing_values.to_frame(), annot=True, cmap='viridis')
-plt.title('Missing Values Heatmap')
+#sns.heatmap(missing_values.to_frame(), annot=True, cmap='viridis')
+#plt.title('Missing Values Heatmap')
 #plt.show()
 
 duplicated_valus = df.duplicated().sum() # 0 duplicate rows
@@ -64,15 +65,17 @@ label_encoder = LabelEncoder()
 catagorical_features = ["gender"]
 preproccess_df["gender"]= label_encoder.fit_transform(preproccess_df[catagorical_features])
 
-df["country_france"] = 0
-df.loc[df["country"] == "France", "country_france"] = 1
+preproccess_df["country_france"] = 0
+preproccess_df.loc[preproccess_df["country"] == "France", "country_france"] = 1
 
-df["country_germany"] = 0
-df.loc[df["country"] == "Germany", "country_germany"] = 1
+preproccess_df["country_germany"] = 0
+preproccess_df.loc[preproccess_df["country"] == "Germany", "country_germany"] = 1
 
-df["country_spain"] = 0
-df.loc[df["country"] == "Spain", "country_spain"] = 1
-preproccess_df = preproccess_df.drop("country", axis=1)
+preproccess_df["country_spain"] = 0
+preproccess_df.loc[preproccess_df["country"] == "Spain", "country_spain"] = 1
+
+preproccess_df=preproccess_df.drop("country", axis =1)
+
 #one hot encoding for age group
 agegroup_dummies = pd.get_dummies(preproccess_df["AgeGroup"], prefix="AgeGroup")
 preproccess_df = pd.concat([preproccess_df, agegroup_dummies], axis=1)
@@ -90,7 +93,7 @@ final_data = pd.read_csv("final_preproccessed_data.csv")
 (final_data["AgeGroup_elderly"].value_counts()) # 45
 (final_data["AgeGroup_Adult"].value_counts()) # 7432
 
-print(final_data.info())
+#print(final_data.info())
 
-#next step outliers and correlation analysis and feature selection
+#Outliers
 
