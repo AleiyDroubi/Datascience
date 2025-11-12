@@ -95,5 +95,4 @@ final_data = pd.read_csv("final_preproccessed_data.csv")
 
 #print(final_data.info())
 
-#Outliers
-
+#No outliers in all data except score credite but e need them
